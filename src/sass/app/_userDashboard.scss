@@ -1,0 +1,47 @@
+@media screen and (min-width: 1620px) {
+  .row.shift-up {
+    > div {
+      margin-top: -573px;
+    }
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .panel.feed-panel.large-panel {
+    height: 824px;
+  }
+}
+
+.card-body {
+  background-color: #ef6c00ce;
+  color: whitesmoke;
+  border-radius: 6px;
+  text-align: center;
+
+  //border: 5px solid #da6201ce;
+
+  -webkit-box-shadow: 5px 9px 28px -6px rgba(64, 62, 64, 1);
+  -moz-box-shadow: 5px 9px 28px -6px rgba(64, 62, 64, 1);
+  box-shadow: 5px 9px 28px -6px rgba(64, 62, 64, 1);
+}
+
+.card-deck {
+  margin: 3%;
+}
+
+.margin-btn {
+  margin-top: 2%;
+}
+
+input {
+  margin-bottom: 4%;
+  text-align: left;
+}
+
+th {
+  text-align: center;
+}
+
+select {
+  margin-bottom: 1%;
+}

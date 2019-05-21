@@ -1,0 +1,36 @@
+
+<div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12"
+           ba-panel
+           ba-panel-class="popular-app panel">
+  <div ng-repeat="dish in dishes" class="popular-app-cost row">
+    <div class="col-xs-4">
+       {{dish.name}}
+    </div>
+    <div class="col-xs-4 text-center">
+        € {{dish.price}}
+    </div>
+    <div class="col-xs-4">
+        <div class="row">
+            <a ng-click="increase(dish.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+            <div ng-model="order[product.id].quantity">{{order[dish.id].quantity}}</div>
+            <a ng-click="decrease(dish.id)" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+    </div>
+  </div>
+</div>
+<a ng-click="confirmOrder()" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Confirm Order</a>
+
+
+
+<div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12"
+           ba-panel
+           ba-panel-class="popular-app panel">
+  <div ng-repeat="(id, activeOrder) in activeOrders" class="popular-app-cost row">
+      <div class="col-xs-4">
+        {{activeOrder.id}}, {{activeOrder.order}}, {{activeOrder.price}}
+      </div>
+      <div class="col-xs-4 text-center">
+        {{activeOrder.quantity}}
+      </div>
+  </div>
+</div>

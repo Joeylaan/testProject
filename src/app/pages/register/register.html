@@ -1,0 +1,146 @@
+<main class="auth-main">
+  <div class="auth-block">
+    <h1>Registreer je nu!</h1>
+    <a href="auth.html" class="auth-link">Already have a Blur Admin account? Sign in!</a>
+
+    <div class="form-group">
+      <button ng-click="setUser()" class="btn btn-defautl">Gebruiker</button>
+      <button ng-click="setOrganisation()" class="btn btn-defautl">Organisatie</button>
+    </div>
+
+    <form class="form-horizontal">
+      <div ng-if="userSet">
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Voornaam</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.firstName" class="form-control" placeholder="first Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Achternaam</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.lastName" class="form-control" placeholder="last Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+          <div class="col-sm-10">
+            <input required type="email" class="form-control" ng-model="user.email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Woonplaats</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.city" class="form-control" id="inputName3"
+              placeholder="Woonplaats">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Straat</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.street" class="form-control" id="inputName3"
+              placeholder="straat">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Huisnummer</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.houseNumber" class="form-control" id="inputName3"
+              placeholder="Huisnummer">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Postcode</label>
+
+          <div class="col-sm-10">
+            <input required type="text" ng-model="user.postalCode" class="form-control" id="inputName3"
+              placeholder="Postcode">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputName3" class="col-sm-2 control-label">Geboortedatum</label>
+
+          <div class="col-sm-10">
+            <input required type="date" ng-model="user.birthDate" class="form-control" id="inputName3"
+              placeholder="Geboortedatum">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Wachtwoord</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="user.password" id="inputPassword3"
+              placeholder="Wachtwoord">
+          </div>
+        </div>
+      </div>
+
+      <div ng-if="organizationSet">
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Bedrijfsnaam</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.companyname"
+              id="inputPassword3" placeholder="Bedrijfsnaam">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Email Bedrijf</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.email" id="inputPassword3"
+              placeholder="Wachtwoord">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Postcode Bedrijf</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.postalcode"
+              id="inputPassword3" placeholder="Postcode Bedrijf">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Plaats Bedrijf</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.city" id="inputPassword3"
+              placeholder="Plaats Bedrijf">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Huisnummer Bedrijf</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.housenumber"
+              id="inputPassword3" placeholder="Huisnummer Bedrijf">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Straat Bedrijf</label>
+
+          <div class="col-sm-10">
+            <input required type="password" class="form-control" ng-model="vm.organisation.street" id="inputPassword3"
+              placeholder="Straat Bedrijf">
+          </div>
+        </div>
+
+      </div>
+
+      <div ng-if="userSet">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" ng-click="saveUser()" class="btn btn-default btn-auth">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</main>
